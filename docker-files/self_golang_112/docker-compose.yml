@@ -1,0 +1,9 @@
+version: "2"
+services:
+  golang:
+    image: golang:1.12
+    container_name: self_golang
+    restart: always
+    volumes:
+       -  /usr/local/src:/usr/local/src:ro
+       -  /www/web/self_project/:/www/web:ro

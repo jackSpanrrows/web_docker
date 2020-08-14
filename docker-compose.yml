@@ -1,0 +1,36 @@
+version: '2.1'
+
+services:
+  nginxlocal:
+    image: self_nginx
+    container_name: advertist_nginx
+    restart: always
+    expose:
+     - "80"
+    volumes:
+     - /www/web/:/www/web/self_php
+     - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+     - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    links:
+     - phplocal:php
+    #- go-http-server:http_server
+    environment:
+     - VIRTUAL_HOST=admin.advertist.com,static.imlaoarc.com
+
+  phplocal:
+    image: self_php
+    container_name: self_php
+    expose:
+     - "9000"
+    restart: always
+    volumes:
+     - /www/web:/www/web/self_php
+     - ./docker/php/src:/usr/local/src
+     # - ./docker/php/php.ini:/usr/local/etc/php/php.ini:ro
+     #- ./docker/php/www.conf:/usr/local/etc/php-fpm.d/www.conf
+
+networks:
+  default:
+    external:
+      name: proxy-network
+

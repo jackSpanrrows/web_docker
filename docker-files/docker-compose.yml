@@ -1,0 +1,26 @@
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    expose:
+    -  27017
+    volumes:
+    -  ./src:/usr/local/src
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    expose:
+    -  6379
+    volumes:
+    -  ./src:/usr/local/src
+
+  memcached:
+    image: memcached
+    container_name: memcached
+    restart: always
+    expose:
+    -  11211
+    volumes:
+    -  ./src:/usr/local/src
+

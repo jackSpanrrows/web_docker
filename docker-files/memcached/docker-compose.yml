@@ -1,0 +1,8 @@
+ memcached:
+    image: memcached
+    container_name: self_memcached
+    restart: always
+    ports:
+       -  6379:6379
+    volumes:
+       -  ./:/usr/local/src

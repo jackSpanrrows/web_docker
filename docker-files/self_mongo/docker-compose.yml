@@ -1,0 +1,10 @@
+version: '3'
+services: 
+  mysql:
+    image: mongo
+    container_name: self_mongo
+    restart: always
+    ports:
+       -  27017:27017
+    volumes:
+       -  ./src:/usr/local/src:ro
