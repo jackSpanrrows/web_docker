@@ -1,3 +1,6 @@
+version: '2.0'
+
+services:
   nginx-proxy:
     image: jwilder/nginx-proxy
     container_name: nginx-proxy
@@ -5,4 +8,9 @@
       - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - ./conf.d:/etc/nginx/conf.d
+      - ./conf.d/:/etc/nginx/conf.d
+
+networks:
+  default:
+    external:
+      name: proxy-network 
