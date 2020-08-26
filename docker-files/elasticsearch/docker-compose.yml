@@ -1,0 +1,24 @@
+ elasticsearch1:
+    image:  elasticsearch:2.4.6
+    container_name: advertist_es
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    mem_limit: 1g
+    volumes:
+        - esdata:/usr/share/elasticsearch/data
+        - logs1:/use/share/elasticsearch/logs
+    ports:
+        - 9200:9200
+ elasticsearch2:
+     image:  elasticsearch:2.4.6
+     environment:
+     - cluster.name=docker-cluster
+     - bootstrap.memory_lock=true
+     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+     - "discovery.zen.ping.unicast.hosts=elasticsearch1"
+     mem_limit: 1g
+     volumes:
+     - esdata2:/usr/share/elasticsearch/data
+     - logs2:/use/share/elasticsearch/logs
