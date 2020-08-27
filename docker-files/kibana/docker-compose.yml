@@ -1,0 +1,14 @@
+ kibana:
+    image: kibana:4.6.6
+    container_name: kibana
+    environment:
+    - I18N_LOCALE=zh-CN
+    - XPACK_GRAPH_ENABLED=true
+    - TIMELION_ENABLED=true
+    - XPACK_MONITORING_COLLECTION_ENABLED="true"
+#    - ELASTICSEARCH_URL=http://172.17.0.12:9200
+    - ELASTICSEARCH_URL=http://172.17.0.11:9200
+    volumes:
+      - ./config:/opt/kibana/config
+    ports:
+      - "5601:5601"
