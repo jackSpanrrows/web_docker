@@ -1,24 +1,36 @@
  elasticsearch1:
-    image:  elasticsearch:2.4.6
-    container_name: advertist_es
+    image:  jackspanrrows/es:2.4.6
+    container_name: es1
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - node.name=es1
+      - cluster.initial_master_nodes=es1,es2
+      - discovery.seed_hosts=es1,es2
     mem_limit: 1g
     volumes:
-        - esdata:/usr/share/elasticsearch/data
-        - logs1:/use/share/elasticsearch/logs
+        - ./esdata1:/usr/share/elasticsearch/data
+        - ./logs1:/usr/share/elasticsearch/logs
+        - ./plugins:/usr/share/elasticsearch/plugins
     ports:
         - 9200:9200
- elasticsearch2:
-     image:  elasticsearch:2.4.6
-     environment:
-     - cluster.name=docker-cluster
-     - bootstrap.memory_lock=true
-     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-     - "discovery.zen.ping.unicast.hosts=elasticsearch1"
-     mem_limit: 1g
-     volumes:
-     - esdata2:/usr/share/elasticsearch/data
-     - logs2:/use/share/elasticsearch/logs
+# elasticsearch2:
+#     image:  jackspanrrows/es:2.4.6
+#     container_name: es2
+#     environment:
+#     - cluster.name=docker-cluster
+#     - bootstrap.memory_lock=true
+#     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+#     - "discovery.zen.ping.unicast.hosts=elasticsearch1"
+#     - node.name=es2
+#     - cluster.initial_master_nodes=es1,es2
+#     - discovery.seed_hosts=es1,es2
+#     mem_limit: 1g
+#     volumes:
+#     - ./esdata2:/usr/share/elasticsearch/data
+#     - ./logs2:/usr/share/elasticsearch/logs
+#     - ./plugins:/usr/share/elasticsearch/plugins
+
+
+
