@@ -1,3 +1,5 @@
+version: '2'
+services:
   elasticsearch1:
     image:  jackspanrrows/es:2.4.6
     container_name: es1
@@ -16,7 +18,16 @@
     ports:
         - 9200:9200
     restart: always
+    networks:
+      test:
+         ipv4_address: 172.20.0.4
 
+networks:
+  test:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+          gatway: 172.20.0.1
 #    external:
 #     name: test
 

@@ -1,3 +1,5 @@
+version: '2'
+services:
    redis:
     image: redis
     container_name: redis
@@ -6,3 +8,13 @@
        -  6379:6379
     volumes:
        -  ./:/usr/local/src
+    networks:
+      redis:
+       ipv4_address: 172.21.0.5
+
+networks:
+  redis:
+    ipam:
+      config:
+      - subnet: 172.21.0.0/16
+        gatway: 172.21.0.1

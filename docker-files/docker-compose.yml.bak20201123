@@ -1,0 +1,46 @@
+version: '2'
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    expose:
+    -  27017
+    volumes:
+    -  ./src:/usr/local/src
+    networks:
+      cache:
+        ipv4_address: 172.18.0.11
+
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    expose:
+     -  6379
+    volumes:
+     -  ./src:/usr/local/src
+    networks:
+      cache:
+        ipv4_address: 172.18.0.12
+
+  memcached:
+    image: memcached
+    container_name: memcached
+    restart: always
+    expose:
+     -  11211
+    volumes:
+     -  ./src:/usr/local/src
+    networks:
+      cache:
+         ipv4_address: 172.18.0.13
+
+
+networks:
+    cache:
+      ipam:
+         config:
+           - subnet: 172.18.0.1/16
+             gatway: 172.18.0.1
+

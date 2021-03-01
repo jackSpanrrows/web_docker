@@ -1,5 +1,5 @@
   selfnginx:
-    image: jackspanrrows/self_nginx:v1.0
+    image: jackspanrrows/self_nginx
     container_name: self_nginx
     restart: always
     expose:
@@ -10,9 +10,8 @@
      - ./docker/nginx/conf.d:/etc/nginx/conf.d
     links:
      - selfphp:php
-    #- go-http-server:http_server
     environment:
-     - VIRTUAL_HOST=admin.advertist.com,static.imlaoarc.com
+     - VIRTUAL_HOST=admin.advertist.com,static.imlaoarc.com,tools.imlaoarc.com,myadmin.imlaoarc.com,admin.youfuysw.com,www.youfurc.com,www.imlaoarc.com
 
   selfphp:
     image: jackspanrrows/self_php
@@ -23,6 +22,8 @@
     volumes:
      - /private/var/newObject/src/self_project/self_php/github.com:/www/web/self_php
      - ./docker/php/src:/usr/local/src
+     - ./.ssh:/root/.ssh
+     - ./src/php-fpm.conf:/usr/local/etc/php-fpm.conf
      # - ./docker/php/php.ini:/usr/local/etc/php/php.ini:ro
      #- ./docker/php/www.conf:/usr/local/etc/php-fpm.d/www.conf
 

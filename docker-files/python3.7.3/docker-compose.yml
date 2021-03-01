@@ -1,0 +1,9 @@
+  python3:
+    image: jackspanrrows/python3
+    container_name: self_python
+    restart: always
+    ports:
+    - "5000:5000"
+#    volumes:
+#       -  ./:/usr/local/src
+#       - /private/var/newObject/src/self_project/self_python:/www/wen/self_python
