@@ -1,0 +1,28 @@
+version: '3.0'
+services:
+  kafka9094:
+    image: wurstmeister/kafka
+    ports:
+      - '9092:9092'
+    environment:
+      KAFKA_BROKER_ID: 0
+      #KAFKA_CREATE_TOPICS: "kkcloud_core_operater_log_new:2:0"   #kafka启动后初始化一个有2个partition(分区)0个副本名叫kafeidou的topic
+      KAFKA_CREATE_TOPICS: "member_middle_service_exchange"   #kafka启动后初始化一个有2个partition(分区)0个副本名叫kafeidou的topic
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://127.0.0.1:9092
+    volumes:
+      - ./kafka-logs:/kafka
+      - /var/run/docker.sock:/var/run/docker.sock
+    links:
+      - "zookeeper"
+    restart: always
+
+  zookeeper:
+    #image: zookeeper:3.4.13
+    image: zookeeper
+    volumes:
+      - ./data:/data
+    ports:
+      - '2182:2181'
+    restart: always

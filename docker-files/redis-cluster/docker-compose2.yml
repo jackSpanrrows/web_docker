@@ -1,0 +1,29 @@
+version: '3.7'
+services:
+  master:
+    image: redis
+    container_name: selfredis-master-1
+    restart: always
+    command: redis-server  --appendonly yes
+    ports:
+      - 7001:6379
+    volumes:
+      - ./data1:/data
+  slave1:
+    image: redis
+    container_name: selfredis-slave-1
+    restart: always
+    command: redis-server --slaveof selfredis-master-1 6379 --appendonly yes
+    ports:
+      - 7002:6379
+    volumes:
+      - ./data2:/data
+  slave2:
+    image: redis
+    container_name: selfredis-slave-2
+    restart: always
+    command: redis-server --slaveof selfredis-master-1 6379  --appendonly yes
+    ports:
+      - 7003:6379
+    volumes:
+      - ./data3:/data

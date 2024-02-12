@@ -1,0 +1,100 @@
+version: '3.2'
+services:
+  es01:
+    image: elasticsearch:7.5.2
+    container_name: es01
+    environment:
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    volumes:
+      - ./data01:/usr/share/elasticsearch/data
+      - ./logs01:/usr/share/elasticsearch/logs
+      - ./plugins:/usr/share/elasticsearch/plugins
+      - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      - elastic
+    restart: always
+  # es02:
+  #   image: elasticsearch:7.5.2
+  #   container_name: es02
+  #   environment:
+  #     - node.name=es02
+  #     - cluster.name=es-docker-cluster
+  #     - discovery.seed_hosts=es01,es03
+  #     - cluster.initial_master_nodes=es01,es02,es03
+  #     - bootstrap.memory_lock=true
+  #     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  #   ulimits:
+  #     memlock:
+  #       soft: -1
+  #       hard: -1
+  #   volumes:
+  #     - ./data02:/usr/share/elasticsearch/data
+  #     - ./logs02:/usr/share/elasticsearch/logs
+  #     - ./plugins:/usr/share/elasticsearch/plugins
+  #     # - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+  #   networks:
+  #     - elastic
+  #   restart: always
+  # es03:
+  #   image: elasticsearch:7.5.2
+  #   container_name: es03
+  #   environment:
+  #     - node.name=es03
+  #     - cluster.name=es-docker-cluster
+  #     - discovery.seed_hosts=es01,es02
+  #     - cluster.initial_master_nodes=es01,es02,es03
+  #     - bootstrap.memory_lock=true
+  #     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  #   ulimits:
+  #     memlock:
+  #       soft: -1
+  #       hard: -1
+  #   volumes:
+  #     - ./data03:/usr/share/elasticsearch/data
+  #     - ./logs03:/usr/share/elasticsearch/logs
+  #     - ./plugins:/usr/share/elasticsearch/plugins
+  #     # - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+  #   networks:
+  #     - elastic
+  #   restart: always
+
+  kibana:
+    image: kibana:7.5.2
+    container_name: kibana
+    environment:
+    - I18N_LOCALE=zh-CN
+    - XPACK_GRAPH_ENABLED=true
+    - TIMELION_ENABLED=true
+    - XPACK_MONITORING_COLLECTION_ENABLED="true"
+    - ELASTICSEARCH_URL=http://127.0.0.1:9200
+    # - ELASTICSEARCH_URL=http://172.23.0.3:9200
+    # - ELASTICSEARCH_URL=http://172.23.0.4:9200
+    volumes:
+      - ./config/kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - "5601:5601"
+    networks:
+      - elastic
+    restart: always
+    depends_on:
+      - es01
+volumes:
+  data01:
+    driver: local
+  # data02:
+  #   driver: local
+  # data03:
+  #   driver: local
+  logs01:
+    driver: local
+  # logs02:
+  #   driver: local
+  # logs03:
+  #   driver: local
+
+networks:
+  elastic:
+    driver: bridge

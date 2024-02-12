@@ -1,0 +1,13 @@
+version: '3.0'
+services:
+  golang:
+    image: golang1.20.6:0.2
+    container_name: golang1206
+    tty: true
+    restart: always
+    ports:
+      - "8081:8081"
+    volumes:
+      -  ./src:/usr/local/src
+      -  /Users/leslie/newObject/self_project/self_go:/www/web
+      - ./.ssh:/root/.ssh

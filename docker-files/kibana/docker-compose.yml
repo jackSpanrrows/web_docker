@@ -6,8 +6,8 @@
     - XPACK_GRAPH_ENABLED=true
     - TIMELION_ENABLED=true
     - XPACK_MONITORING_COLLECTION_ENABLED="true"
-#    - ELASTICSEARCH_URL=http://172.17.0.12:9200
-    - ELASTICSEARCH_URL=http://172.17.0.11:9200
+#   - ELASTICSEARCH_URL=http://172.17.0.12:9200
+    - ELASTICSEARCH_URL=http://172.17.0.4:9200
     volumes:
       - ./config:/opt/kibana/config
     ports:

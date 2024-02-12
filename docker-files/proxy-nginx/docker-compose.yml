@@ -1,5 +1,5 @@
   nginx-proxy:
-    image: jwilder/nginx-proxy
+    image: jackspanrrows/nginx-proxy
     container_name: nginx-proxy
     ports:
       - "80:80"

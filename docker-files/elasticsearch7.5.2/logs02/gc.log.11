@@ -1,0 +1,49 @@
+[2024-01-13T12:16:53.086+0000][1][gc] Using Concurrent Mark Sweep
+[2024-01-13T12:16:53.088+0000][1][gc,heap,coops] Heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: 32-bit
+[2024-01-13T12:16:53.163+0000][1][safepoint    ] Safepoint "EnableBiasedLocking", Time since last: 56181284 ns, Reaching safepoint: 1079397 ns, At safepoint: 36393 ns, Total: 1115790 ns
+[2024-01-13T12:16:53.170+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 4392543 ns, Reaching safepoint: 2307371 ns, At safepoint: 65327 ns, Total: 2372698 ns
+[2024-01-13T12:16:53.201+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 31020172 ns, Reaching safepoint: 150818 ns, At safepoint: 19243 ns, Total: 170061 ns
+[2024-01-13T12:16:53.417+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 216025906 ns, Reaching safepoint: 304072 ns, At safepoint: 62051 ns, Total: 366123 ns
+[2024-01-13T12:16:53.433+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 13473024 ns, Reaching safepoint: 2191558 ns, At safepoint: 44545 ns, Total: 2236103 ns
+[2024-01-13T12:16:53.438+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 2944914 ns, Reaching safepoint: 1734364 ns, At safepoint: 47433 ns, Total: 1781797 ns
+[2024-01-13T12:16:53.493+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 52413754 ns, Reaching safepoint: 2467920 ns, At safepoint: 60046 ns, Total: 2527966 ns
+[2024-01-13T12:16:54.219+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 725772710 ns, Reaching safepoint: 420450 ns, At safepoint: 82173 ns, Total: 502623 ns
+[2024-01-13T12:16:54.323+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 103391389 ns, Reaching safepoint: 180455 ns, At safepoint: 169822 ns, Total: 350277 ns
+[2024-01-13T12:16:54.505+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 178419649 ns, Reaching safepoint: 3676073 ns, At safepoint: 121426 ns, Total: 3797499 ns
+[2024-01-13T12:16:54.857+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 348633069 ns, Reaching safepoint: 3010159 ns, At safepoint: 206030 ns, Total: 3216189 ns
+[2024-01-13T12:16:55.011+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 154065312 ns, Reaching safepoint: 38150 ns, At safepoint: 122546 ns, Total: 160696 ns
+[2024-01-13T12:16:55.979+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 967233495 ns, Reaching safepoint: 236659 ns, At safepoint: 244363 ns, Total: 481022 ns
+[2024-01-13T12:16:56.326+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 346578282 ns, Reaching safepoint: 147258 ns, At safepoint: 211607 ns, Total: 358865 ns
+[2024-01-13T12:16:56.331+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 4612342 ns, Reaching safepoint: 118853 ns, At safepoint: 170938 ns, Total: 289791 ns
+[2024-01-13T12:16:56.399+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 68143803 ns, Reaching safepoint: 41537 ns, At safepoint: 174612 ns, Total: 216149 ns
+[2024-01-13T12:16:56.403+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 3543503 ns, Reaching safepoint: 22448 ns, At safepoint: 263183 ns, Total: 285631 ns
+[2024-01-13T12:16:56.425+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 21269184 ns, Reaching safepoint: 583012 ns, At safepoint: 73717 ns, Total: 656729 ns
+[2024-01-13T12:16:56.430+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 1422795 ns, Reaching safepoint: 3556720 ns, At safepoint: 56094 ns, Total: 3612814 ns
+[2024-01-13T12:16:56.435+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 1103639 ns, Reaching safepoint: 3921538 ns, At safepoint: 32963 ns, Total: 3954501 ns
+[2024-01-13T12:16:56.437+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 1984889 ns, Reaching safepoint: 151620 ns, At safepoint: 47347 ns, Total: 198967 ns
+[2024-01-13T12:16:56.440+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 938336 ns, Reaching safepoint: 1585955 ns, At safepoint: 229271 ns, Total: 1815226 ns
+[2024-01-13T12:16:56.448+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 700395 ns, Reaching safepoint: 185601 ns, At safepoint: 7279044 ns, Total: 7464645 ns
+[2024-01-13T12:16:57.414+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 964246826 ns, Reaching safepoint: 623684 ns, At safepoint: 724631 ns, Total: 1348315 ns
+[2024-01-13T12:16:57.842+0000][1][safepoint    ] Safepoint "Deoptimize", Time since last: 428004433 ns, Reaching safepoint: 414197 ns, At safepoint: 290636 ns, Total: 704833 ns
+[2024-01-13T12:16:57.871+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 28302341 ns, Reaching safepoint: 342198 ns, At safepoint: 13420 ns, Total: 355618 ns
+[2024-01-13T12:16:57.872+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 1346438 ns, Reaching safepoint: 102233 ns, At safepoint: 13088 ns, Total: 115321 ns
+[2024-01-13T12:16:57.874+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 1984921 ns, Reaching safepoint: 78806 ns, At safepoint: 12126 ns, Total: 90932 ns
+[2024-01-13T12:16:57.877+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 1981424 ns, Reaching safepoint: 94068 ns, At safepoint: 12346 ns, Total: 106414 ns
+[2024-01-13T12:16:57.878+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 1525926 ns, Reaching safepoint: 115836 ns, At safepoint: 13167 ns, Total: 129003 ns
+[2024-01-13T12:16:57.881+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 2972779 ns, Reaching safepoint: 129654 ns, At safepoint: 11856 ns, Total: 141510 ns
+[2024-01-13T12:16:57.882+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 830232 ns, Reaching safepoint: 68391 ns, At safepoint: 13681 ns, Total: 82072 ns
+[2024-01-13T12:16:57.883+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 719375 ns, Reaching safepoint: 12556 ns, At safepoint: 6572 ns, Total: 19128 ns
+[2024-01-13T12:16:57.883+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 519553 ns, Reaching safepoint: 10078 ns, At safepoint: 42843 ns, Total: 52921 ns
+[2024-01-13T12:16:57.884+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 481651 ns, Reaching safepoint: 149060 ns, At safepoint: 49164 ns, Total: 198224 ns
+[2024-01-13T12:16:57.885+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 534255 ns, Reaching safepoint: 9522 ns, At safepoint: 34688 ns, Total: 44210 ns
+[2024-01-13T12:16:57.886+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 654917 ns, Reaching safepoint: 131930 ns, At safepoint: 36508 ns, Total: 168438 ns
+[2024-01-13T12:16:57.886+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 647400 ns, Reaching safepoint: 135856 ns, At safepoint: 36826 ns, Total: 172682 ns
+[2024-01-13T12:16:57.888+0000][1][safepoint    ] Safepoint "RevokeBias", Time since last: 1087347 ns, Reaching safepoint: 141359 ns, At safepoint: 55747 ns, Total: 197106 ns
+[2024-01-13T12:16:57.890+0000][1][gc,heap,exit ] Heap
+[2024-01-13T12:16:57.891+0000][1][gc,heap,exit ]  par new generation   total 157248K, used 100853K [0x00000000e0000000, 0x00000000eaaa0000, 0x00000000eaaa0000)
+[2024-01-13T12:16:57.891+0000][1][gc,heap,exit ]   eden space 139776K,  72% used [0x00000000e0000000, 0x00000000e627d530, 0x00000000e8880000)
+[2024-01-13T12:16:57.891+0000][1][gc,heap,exit ]   from space 17472K,   0% used [0x00000000e8880000, 0x00000000e8880000, 0x00000000e9990000)
+[2024-01-13T12:16:57.892+0000][1][gc,heap,exit ]   to   space 17472K,   0% used [0x00000000e9990000, 0x00000000e9990000, 0x00000000eaaa0000)
+[2024-01-13T12:16:57.892+0000][1][gc,heap,exit ]  concurrent mark-sweep generation total 349568K, used 0K [0x00000000eaaa0000, 0x0000000100000000, 0x0000000100000000)
+[2024-01-13T12:16:57.893+0000][1][gc,heap,exit ]  Metaspace       used 14502K, capacity 14956K, committed 15360K, reserved 1062912K
+[2024-01-13T12:16:57.893+0000][1][gc,heap,exit ]   class space    used 1698K, capacity 1915K, committed 2048K, reserved 1048576K

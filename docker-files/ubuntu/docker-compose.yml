@@ -1,0 +1,10 @@
+version: "3"
+services:
+  ubuntu:
+    image: jackspanrrows/ubuntu
+    container_name: ubuntu
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      -  ./:/usr/local/src

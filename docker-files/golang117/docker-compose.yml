@@ -1,0 +1,10 @@
+  golang:
+    image: golang:1.17.13
+    container_name: golang117
+    tty: true
+    restart: always
+    ports:
+     - 8081:8081
+    volumes:
+       -  ./src:/usr/local/src
+       -  /Users/leslie/newObject/self_project/self_go:/www/web

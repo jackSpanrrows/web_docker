@@ -1,0 +1,15 @@
+  selfnginx:
+    image: jackspanrrows/self_nginx:v1.0
+    container_name: self_nginx
+    restart: always
+    expose:
+     - "80"
+    volumes:
+     - D:\newObject\self_project\self_go\quic-go:/www
+     - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+     - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    environment:
+     - VIRTUAL_HOST=site.quic.com
+
+
+
