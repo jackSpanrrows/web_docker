@@ -1,11 +1,11 @@
-[2024-01-13T12:17:08.245+0000][74][gc] Using Concurrent Mark Sweep
-[2024-01-13T12:17:08.246+0000][74][gc,heap,coops] Heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: 32-bit
-[2024-01-13T12:17:08.319+0000][74][safepoint    ] Safepoint "EnableBiasedLocking", Time since last: 40118199 ns, Reaching safepoint: 140830 ns, At safepoint: 28320 ns, Total: 169150 ns
-[2024-01-13T12:17:08.323+0000][74][gc,heap,exit ] Heap
-[2024-01-13T12:17:08.324+0000][74][gc,heap,exit ]  par new generation   total 157248K, used 5591K [0x00000000e0000000, 0x00000000eaaa0000, 0x00000000eaaa0000)
-[2024-01-13T12:17:08.325+0000][74][gc,heap,exit ]   eden space 139776K,   4% used [0x00000000e0000000, 0x00000000e0575da0, 0x00000000e8880000)
-[2024-01-13T12:17:08.326+0000][74][gc,heap,exit ]   from space 17472K,   0% used [0x00000000e8880000, 0x00000000e8880000, 0x00000000e9990000)
-[2024-01-13T12:17:08.326+0000][74][gc,heap,exit ]   to   space 17472K,   0% used [0x00000000e9990000, 0x00000000e9990000, 0x00000000eaaa0000)
-[2024-01-13T12:17:08.327+0000][74][gc,heap,exit ]  concurrent mark-sweep generation total 349568K, used 0K [0x00000000eaaa0000, 0x0000000100000000, 0x0000000100000000)
-[2024-01-13T12:17:08.328+0000][74][gc,heap,exit ]  Metaspace       used 173K, capacity 4480K, committed 4480K, reserved 1056768K
-[2024-01-13T12:17:08.328+0000][74][gc,heap,exit ]   class space    used 7K, capacity 384K, committed 384K, reserved 1048576K
+[2024-02-16T10:11:07.730+0000][74][gc] Using Concurrent Mark Sweep
+[2024-02-16T10:11:07.731+0000][74][gc,heap,coops] Heap address: 0x00000000c0000000, size: 1024 MB, Compressed Oops mode: 32-bit
+[2024-02-16T10:11:07.952+0000][74][safepoint    ] Safepoint "EnableBiasedLocking", Time since last: 84189994 ns, Reaching safepoint: 9873534 ns, At safepoint: 138561 ns, Total: 10012095 ns
+[2024-02-16T10:11:07.956+0000][74][gc,heap,exit ] Heap
+[2024-02-16T10:11:07.958+0000][74][gc,heap,exit ]  par new generation   total 230016K, used 12269K [0x00000000c0000000, 0x00000000cf990000, 0x00000000cf990000)
+[2024-02-16T10:11:07.960+0000][74][gc,heap,exit ]   eden space 204480K,   6% used [0x00000000c0000000, 0x00000000c0bfb4b8, 0x00000000cc7b0000)
+[2024-02-16T10:11:07.962+0000][74][gc,heap,exit ]   from space 25536K,   0% used [0x00000000cc7b0000, 0x00000000cc7b0000, 0x00000000ce0a0000)
+[2024-02-16T10:11:07.964+0000][74][gc,heap,exit ]   to   space 25536K,   0% used [0x00000000ce0a0000, 0x00000000ce0a0000, 0x00000000cf990000)
+[2024-02-16T10:11:07.966+0000][74][gc,heap,exit ]  concurrent mark-sweep generation total 793024K, used 0K [0x00000000cf990000, 0x0000000100000000, 0x0000000100000000)
+[2024-02-16T10:11:07.967+0000][74][gc,heap,exit ]  Metaspace       used 173K, capacity 4480K, committed 4480K, reserved 1056768K
+[2024-02-16T10:11:07.969+0000][74][gc,heap,exit ]   class space    used 8K, capacity 384K, committed 384K, reserved 1048576K

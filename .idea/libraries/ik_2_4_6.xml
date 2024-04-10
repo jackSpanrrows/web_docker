@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="ik-2.4.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/docker-files/elasticsearch/ik-2.4.6/commons-codec-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/docker-files/elasticsearch/ik-2.4.6/httpcore-4.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/docker-files/elasticsearch/ik-2.4.6/httpclient-4.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/docker-files/elasticsearch/ik-2.4.6/elasticsearch-analysis-ik-1.10.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/docker-files/elasticsearch/ik-2.4.6/commons-logging-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,3 +1,5 @@
+version: '3.0'
+services:
   selfnginx:
     image: jackspanrrows/self_nginx:v1.0
     container_name: self_nginx
@@ -5,11 +7,12 @@
     expose:
      - "80"
     volumes:
-     - /private/var/newObject/src/self_project/self_php/github.com:/www/web/self_php
+     # - /private/var/newObject/src/self_project/self_php/github.com:/www/web/self_php
+     - /Users/pc/newObject/self_project/self_php/github.com:/www/web/self_php
      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
      - ./docker/nginx/conf.d:/etc/nginx/conf.d
     links:
-     - selfphp:php
+     - self_php:php
     #- go-http-server:http_server
     environment:
      - VIRTUAL_HOST=admin.advertist.com,static.imlaoarc.com
@@ -21,7 +24,7 @@
      - "9000"
     restart: always
     volumes:
-     - /private/var/newObject/src/self_project/self_php/github.com:/www/web/self_php
+     - /Users/pc/newObject/self_project/self_php/github.com:/www/web/self_php
      - ./docker/php/src:/usr/local/src
      # - ./docker/php/php.ini:/usr/local/etc/php/php.ini:ro
      #- ./docker/php/www.conf:/usr/local/etc/php-fpm.d/www.conf
