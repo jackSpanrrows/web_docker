@@ -1,7 +1,0 @@
-  golang:
-    image: golang116
-    container_name: golang116
-    tty: true
-    volumes:
-       -  ./src:/usr/local/src
-       -  /Users/pc/newObject/self_project/self_go:/www/web
