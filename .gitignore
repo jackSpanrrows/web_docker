@@ -4,3 +4,7 @@ docker-files/elasticsearch/logs1/*
 docker-files/elasticsearch/logs2/*
 docker-files/elasticsearch/esdata1/*
 docker-files/elasticsearch/esdata2/*
+.idea
+.DS_Store
+docker-files/.DS_Store
+docker-files/phpmyadmin/data/

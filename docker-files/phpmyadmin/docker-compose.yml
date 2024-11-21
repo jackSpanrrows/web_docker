@@ -1,17 +1,38 @@
-version: '3.1'
-
 services:
   db:
     image: mariadb:10.6
+    container_name: self_mariadb
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: notSecureChangeMe
     ports:
       - "4000:3306"
+    networks:
+      self_network:
+        ipv4_address: 172.20.1.3
+
   phpmyadmin:
-    image: phpmyadmin
+    image: jackspanrrows/self_phpmyadmin:v0.1
+    container_name: self_phpmyadmin
     restart: always
     ports:
       - 8080:80
+    volumes:
+      - ./data:/var/lib/mysql
     environment:
-      - PMA_ARBITRARY=1
+      PMA_ARBITRARY: '1'
+    networks:
+      self_network:
+        ipv4_address: 172.20.1.4
+
+networks:
+  self_network:
+    external: true
+
+#networks:
+#  my-bridge-network:
+#    driver: bridge
+#    ipam:
+#      config:
+#        - subnet: 172.20.1.0/24
+#          gateway: 172.20.1.1

@@ -1,7 +1,6 @@
-version: '3.0'
 services:
   golang:
-    image: golang1.20.6:0.2
+    image: jackspanrrows/self_golang120:latest
     container_name: golang1206
     tty: true
     restart: always
@@ -9,5 +8,12 @@ services:
       - "8081:8081"
     volumes:
       -  ./src:/usr/local/src
-      -  /Users/leslie/newObject/self_project/self_go:/www/web
+      -  /Users/phantom/work/newObject/self_project:/www/web
       - ./.ssh:/root/.ssh
+    networks:
+      self_network:
+        ipv4_address: 172.20.1.5
+
+networks:
+  self_network:
+    external: true
