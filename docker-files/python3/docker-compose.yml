@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+  app:
+    image: jackspanrrows/python3:latest
+    container_name: self_python3
+    tty: true
+    restart: always
+    volumes:
+      - /Users/phantom/work/newObject/self_project/self_python3/scrapy_web_py3:/www/web/scrapy_web_py3  # 将当前目录挂载到容器中，以便于开发
+    ports:
+      - "5000:5000"     # 映射容器的5000端口到主机的5000端口
+    networks:
+      self_network:
+        ipv4_address: 172.20.1.12
+
+networks:
+  self_network:
+    external: true

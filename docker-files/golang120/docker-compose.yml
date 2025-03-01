@@ -1,14 +1,14 @@
 services:
   golang:
     image: jackspanrrows/self_golang120:latest
-    container_name: golang1206
+    container_name: self_golang
     tty: true
     restart: always
     ports:
       - "8081:8081"
     volumes:
       -  ./src:/usr/local/src
-      -  /Users/phantom/work/newObject/self_project:/www/web
+      -  /Users/phantom/work/newObject/self_project/self_go/golang_example:/www/web
       - ./.ssh:/root/.ssh
     networks:
       self_network:

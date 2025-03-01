@@ -1,0 +1,18 @@
+services:
+  centos:
+    image: centos:7
+    container_name: self_centos
+    restart: always
+    ports:
+      - 80:80
+    tty: true
+    volumes:
+      -  ./:/usr/local/src
+      -  /Users/phantom/work/newObject/self_project:/www/web
+    networks:
+      self_network:
+        ipv4_address: 172.20.1.10
+
+networks:
+  self_network:
+    external: true
