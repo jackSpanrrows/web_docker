@@ -1,4 +1,5 @@
 #default.conf
+*/.DS_Store
 *.log
 docker-files/elasticsearch/logs1/*
 docker-files/elasticsearch/logs2/*
